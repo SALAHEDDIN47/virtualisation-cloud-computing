@@ -1,4 +1,5 @@
 packages:
+  - epel-release
   - vim
   - htop
   - net-tools
