@@ -11,3 +11,15 @@ users:
     ssh_authorized_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICCnNKOsUE73S9aS6kuvsb9ymAiOF4Y7Vc6qmrqglKDh salaheddinejalloul538@gmail.com
 ssh_pwauth: false
+package_update: true
+packages:
+  - nginx
+write_files:
+  - path: /etc/motd
+    permissions: '0644'
+    content: |
+      Laboratoire BD2C – Cloud-Init
+runcmd:
+  - [sh, -c, 'systemctl enable --now nginx']
+  # Ouvrir le port 80 dans le pare-feu (spécifique à Rocky)
+  - [sh, -c, 'firewall-cmd --permanent --add-service=http && firewall-cmd --reload']
