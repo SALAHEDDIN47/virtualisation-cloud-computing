@@ -1,0 +1,13 @@
+vms:
+  - name: vm-web
+    hostname: web01
+    username: etudiant
+    profile: web
+  - name: vm-db
+    hostname: db01
+    username: etudiant
+    profile: db
+  - name: vm-admin
+    hostname: admin01
+    username: etudiant
+    profile: admin

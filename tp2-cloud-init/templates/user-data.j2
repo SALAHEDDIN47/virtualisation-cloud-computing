@@ -1,0 +1,24 @@
+#cloud-config
+hostname: {{ hostname }}
+manage_etc_hosts: true
+users:
+  - default
+  - name: {{ username }}
+    groups: [wheel, sudo]
+    shell: /bin/bash
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    lock_passwd: true
+    ssh_authorized_keys:
+      - {{ ssh_public_key }}
+ssh_pwauth: false
+package_update: true
+packages:
+{% for pkg in packages %}
+  - {{ pkg }}
+{% endfor %}
+runcmd:
+  - [sh, -c, 'echo "Serveur {{ hostname }} (Rôle: {{ role }}) prêt." > /etc/motd']
+  - [sh, -c, 'firewall-cmd --permanent --add-service=http && firewall-cmd --reload || true']
+{% if service != 'none' %}
+  - [sh, -c, 'systemctl enable --now {{ service }}']
+{% endif %}

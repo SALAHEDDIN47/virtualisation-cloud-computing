@@ -1,0 +1,6 @@
+packages:
+  - vim
+  - htop
+  - net-tools
+service: none
+role: admin
