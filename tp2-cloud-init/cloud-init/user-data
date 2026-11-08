@@ -8,3 +8,6 @@ users:
     shell: /bin/bash
     sudo: "ALL=(ALL) NOPASSWD:ALL"
     lock_passwd: true
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICCnNKOsUE73S9aS6kuvsb9ymAiOF4Y7Vc6qmrqglKDh salaheddinejalloul538@gmail.com
+ssh_pwauth: false
