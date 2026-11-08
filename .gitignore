@@ -1,0 +1,11 @@
+# Ignorer les fichiers de grosse taille
+*.iso
+*.qcow2
+*.img
+*.img.raw
+*.iso.part
+
+# Ignorer les dossiers de travail et environnements virtuels
+.venv/
+generated/
+*.log
