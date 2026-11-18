@@ -1,4 +1,4 @@
-# Virtualisation et Cloud Computing (TP1 & TP2)
+# Virtualisation et Cloud Computing 
 
 Ce dépôt contient l'ensemble des travaux pratiques réalisés dans le cadre du cours de Virtualisation et Cloud Computing. Il documente la mise en place d'une infrastructure virtualisée avec KVM/QEMU, ainsi que l'automatisation du déploiement et de la configuration avec Cloud-Init et Jinja2.
 
@@ -87,4 +87,4 @@ Pour reproduire ce projet sur une machine Rocky Linux 9 (hôte) :
    (Les instructions détaillées de déploiement via virt-install sont documentées dans le README du TP2).
 
 ---
-*Auteur : SALAHEDDIN47 - Étudiant en Cloud Computing & Virtualisation.*
+*Auteur : SALAHEDDIN47 - Étudiant en Big Data & Cloud Computing .*
